@@ -8,13 +8,18 @@ The 'master' branch tracks upstream directly.
 
 New work is always done in a working branch ('pull-' or 'topic-').
 
+A 'carrying' branch will be created if there are PRs rejected from upstream that I still want to carry in my version of the product.
+
+A 'release' branch will be created if I ever intend to stand up this work independently of upstream. This will take selected drops of master plus 'carrying', plus open working branchs I want in the release.
+
 ## Merge flow
 
 * working branches merge into develop
 * working branches are PR'd into upstream
-* upstream merges into master, develop
 * working branches rebase on top of master
-* release branch will be created if I ever intend to stand up this work independently of upstream. this will take master plus open working branchs I want in the release
+* upstream merges often into master, develop, carrying
+* upstream merges occasionally into release
+* release is the only branch that is ever stood up
 
 ## PR flow
 
