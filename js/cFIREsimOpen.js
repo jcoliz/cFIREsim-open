@@ -81,6 +81,13 @@ $(document).ready(function() {
 		reader.readAsText(f);
 	});
 
+	// Toggle up/down icon on show hide of collapse element
+	$(".collapse").on('show.bs.collapse', function(){
+		$(this).prev(".panel-heading").find("img").attr("src","image/up.svg");
+	}).on('hide.bs.collapse', function(){
+		$(this).prev(".panel-heading").find("img").attr("src","image/down.svg");
+	});
+
 });
 
 var Simulation = {
