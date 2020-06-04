@@ -23,16 +23,16 @@ $(document).ready(function() {
 			$(".runSim").addClass("disabled");
 		}
 	}
-	$("input[ng-model='data.portfolio.percentEquities']").keyup(function(){
+	$("input[ng-model='data.portfolio.percentEquities']").change(function(){
 		checkAllocation(cmpAllocation,"#allocationError")
 	});
-	$("input[ng-model='data.portfolio.percentBonds']").keyup(function(){
+	$("input[ng-model='data.portfolio.percentBonds']").change(function(){
 		checkAllocation(cmpAllocation,"#allocationError")
 	});
-	$("input[ng-model='data.portfolio.percentGold']").keyup(function(){
+	$("input[ng-model='data.portfolio.percentGold']").change(function(){
 		checkAllocation(cmpAllocation,"#allocationError")
 	});
-	$("input[ng-model='data.portfolio.percentCash']").keyup(function(){
+	$("input[ng-model='data.portfolio.percentCash']").change(function(){
 		checkAllocation(cmpAllocation,"#allocationError")
 	});
 
@@ -48,16 +48,16 @@ $(document).ready(function() {
 			return false;
 		}
 	}
-	$("input[ng-model='data.portfolio.targetPercentEquities']").keyup(function() {
+	$("input[ng-model='data.portfolio.targetPercentEquities']").change(function() {
 		checkAllocation(cmpTargetAllocation,"#targetAllocationError");
 	});
-	$("input[ng-model='data.portfolio.targetPercentBonds']").keyup(function() {
+	$("input[ng-model='data.portfolio.targetPercentBonds']").change(function() {
 		checkAllocation(cmpTargetAllocation,"#targetAllocationError");
 	});
-	$("input[ng-model='data.portfolio.targetPercentGold']").keyup(function() {
+	$("input[ng-model='data.portfolio.targetPercentGold']").change(function() {
 		checkAllocation(cmpTargetAllocation,"#targetAllocationError");
 	});
-	$("input[ng-model='data.portfolio.targetPercentCash']").keyup(function() {
+	$("input[ng-model='data.portfolio.targetPercentCash']").change(function() {
 		checkAllocation(cmpTargetAllocation,"#targetAllocationError");
 	});
 	
