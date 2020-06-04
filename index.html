@@ -358,13 +358,13 @@
                                 <label>
                                     Starting Data Year:
                                     <div class="input-group">
-                                        <input type="text" class="form-control" ng-model="data.data.start">
+                                        <input type="number" class="form-control" ng-model="data.data.start">
                                     </div>
                                 </label>
                                 <label>
                                     Ending Data Year:
                                     <div class="input-group">
-                                        <input type="text" class="form-control" ng-model="data.data.end">
+                                        <input type="number" class="form-control" ng-model="data.data.end">
                                     </div>
                                 </label>
                             </div>
@@ -372,7 +372,7 @@
                                 <label>
                                     Starting Data Year:
                                     <div class="input-group">
-                                        <input type="text" class="form-control" ng-model="data.data.singleStart">
+                                        <input type="number" class="form-control" ng-model="data.data.singleStart">
                                     </div>
                                 </label>
                             </div>
@@ -380,7 +380,7 @@
                                 <label>
                                     Market Growth:
                                     <div class="input-group">
-                                        <input type="text" class="form-control" ng-model="data.data.growth">
+                                        <input type="number" class="form-control" ng-model="data.data.growth">
                                         <span class="input-group-addon">%</span>
                                     </div>
                                 </label>
@@ -389,13 +389,13 @@
                                 <label>
                                     Minimum Starting Cape:
                                     <div class="input-group">
-                                        <input type="text" class="form-control" ng-model="data.data.mincape">
+                                        <input type="number" class="form-control" ng-model="data.data.mincape">
                                     </div>
                                 </label>
                                 <label>
                                     Maximum Starting Cape:
                                     <div class="input-group">
-                                        <input type="text" class="form-control" ng-model="data.data.maxcape">
+                                        <input type="number" class="form-control" ng-model="data.data.maxcape">
                                     </div>
                                 </label>
                             </div>
@@ -414,7 +414,7 @@
                                 <label>
                                     Minimum Success Rate:
                                     <div class="input-group">
-                                        <input type="text" class="form-control" ng-model="data.investigate.successRate">
+                                        <input type="number" class="form-control" ng-model="data.investigate.successRate">
                                         <span class="input-group-addon">%</span>
                                     </div>
                                 </label>
@@ -639,7 +639,7 @@
                                 <label>
                                     Yearly Spending (% of portfolio):
                                     <div class="input-group">
-                                        <input type="text"
+                                        <input type="number"
                                                class="form-control"
                                                ng-model="data.spending.percentageOfPortfolioPercentage">
                                         <span class="input-group-addon">%</span>
@@ -659,7 +659,7 @@
                                         Never Less Than:
                                         <div class="input-group">
                                             <span class="input-group-addon" ng-show="data.spending.percentageOfPortfolioFloorType == 'definedValue'">$</span>
-                                            <input type="text"
+                                            <input type="number"
                                                    class="form-control"
                                                    ng-model="data.spending.percentageOfPortfolioFloorValue"
                                                    ng-disabled="data.spending.percentageOfPortfolioFloorType == 'none' || data.spending.percentageOfPortfolioFloorType == 'pensions'">
@@ -680,7 +680,7 @@
                                         Never More Than:
                                         <div class="input-group">
                                             <span class="input-group-addon" ng-show="data.spending.percentageOfPortfolioCeilingType == 'definedValue'">$</span>
-                                            <input type="text"
+                                            <input type="number"
                                                    class="form-control"
                                                    ng-model="data.spending.percentageOfPortfolioCeilingValue"
                                                    ng-disabled="data.spending.percentageOfPortfolioCeilingType == 'none'">
@@ -692,12 +692,14 @@
                             <div id="hebelerAutopilotOptions" class="spendingOptions">
                                 <label>
                                     Age of Retirement:
-                                    <input type="text" class="form-control" ng-model="data.spending.hebelerAgeOfRetirement">
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" ng-model="data.spending.hebelerAgeOfRetirement">
+                                    </div>
                                 </label>
                                 <label>
                                     Weighted RMD:
                                     <div class="input-group">
-                                        <input type="text"
+                                        <input type="number"
                                                class="form-control"
                                                ng-model="data.spending.hebelerWeightedRMD">
                                         <span class="input-group-addon">%</span>
@@ -706,7 +708,7 @@
                                 <label>
                                     Weighted CPI:
                                     <div class="input-group">
-                                        <input type="text"
+                                        <input type="number"
                                                class="form-control"
                                                ng-model="data.spending.hebelerWeightedCPI">
                                         <span class="input-group-addon">%</span>
@@ -716,14 +718,14 @@
                             <div id="variableSpendingOptions" class="spendingOptions">
                                 <label>
                                     Z Value (0.000 - 1.000):
-                                    <input type="text" class="form-control" ng-model="data.spending.variableSpendingZValue">
+                                    <input type="number" step="0.1" ng-step="0.001" class="form-control" ng-model="data.spending.variableSpendingZValue">
                                 </label>
                             </div>
                             <div id="guytonKlingerOptions" class="spendingOptions">
                                 <label>
                                     Exceeds:
                                     <div class="input-group">
-                                        <input type="text"
+                                        <input type="number"
                                                class="form-control"
                                                ng-model="data.spending.guytonKlingerExceeds">
                                         <span class="input-group-addon">%</span>
@@ -732,7 +734,7 @@
                                 <label>
                                     Cut:
                                     <div class="input-group">
-                                        <input type="text"
+                                        <input type="number"
                                                class="form-control"
                                                ng-model="data.spending.guytonKlingerCut">
                                         <span class="input-group-addon">%</span>
@@ -742,7 +744,7 @@
                                 <label>
                                     Fall:
                                     <div class="input-group">
-                                        <input type="text"
+                                        <input type="number"
                                                class="form-control"
                                                ng-model="data.spending.guytonKlingerFall">
                                         <span class="input-group-addon">%</span>
@@ -751,7 +753,7 @@
                                 <label>
                                     Raise:
                                     <div class="input-group">
-                                        <input type="text"
+                                        <input type="number"
                                                class="form-control"
                                                ng-model="data.spending.guytonKlingerRaise">
                                         <span class="input-group-addon">%</span>
@@ -762,7 +764,8 @@
                                 <label>
                                     Rate of Return:
                                     <div class="input-group">
-                                        <input type="text"
+                                        <input type="number"
+                                                step="0.1"
                                                class="form-control"
                                                ng-model="data.spending.vpwRateOfReturn">
                                         <span class="input-group-addon">%</span>
@@ -772,7 +775,7 @@
                                     Future Value:
                                     <div class="input-group">
                                         <span class="input-group-addon">$</span>
-                                        <input type="text" class="form-control" ng-model="data.spending.vpwFutureValue">
+                                        <input type="number" class="form-control" ng-model="data.spending.vpwFutureValue">
                                     </div>
                                 </label>
                             </div>
@@ -780,7 +783,8 @@
                                 <label>
                                     Cyclically Adjusted Earnings Yield Multiplier:
                                     <div class="input-group">
-                                        <input type="text"
+                                        <input type="number"
+                                                step="0.1"
                                                class="form-control"
                                                ng-model="data.spending.variableCAPEMultiplier">
                                         <span class="input-group-addon">*</span>
@@ -789,7 +793,7 @@
                                 <label>
                                     Constant Adjustment:
                                     <div class="input-group">
-                                        <input type="text" class="form-control" ng-model="data.spending.variableCAPEConstantAdjustment">
+                                        <input type="number" class="form-control" ng-model="data.spending.variableCAPEConstantAdjustment">
                                         <span class="input-group-addon">+</span>
                                     </div>
                                 </label>
@@ -831,7 +835,7 @@
                                 </label>
                                 <div class="input-group">
                                     <span class="input-group-addon">$</span>
-                                    <input type="text"
+                                    <input type="number"
                                            class="form-control"
                                            ng-model="data.spending.floorValue"
                                            ng-disabled="data.spending.floor != 'definedValue'">
@@ -844,7 +848,7 @@
                                 </label>
                                 <div class="input-group">
                                     <span class="input-group-addon">$</span>
-                                    <input type="text"
+                                    <input type="number"
                                            class="form-control"
                                            ng-model="data.spending.ceilingValue"
                                            ng-disabled="data.spending.ceiling != 'definedValue'">
