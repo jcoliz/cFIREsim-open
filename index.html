@@ -512,13 +512,13 @@
                                         <div class="col-md-6">
                                             <label>
                                                 Start Year:
-                                                <input type="text" class="form-control" ng-model="data.portfolio.changeAllocationStartYear">
+                                                <input type="number" class="form-control" ng-model="data.portfolio.changeAllocationStartYear">
                                             </label>
                                         </div>
                                         <div class="col-md-6">
                                             <label>
                                                 End Year:
-                                                <input type="text" class="form-control" ng-model="data.portfolio.changeAllocationEndYear">
+                                                <input type="number" class="form-control" ng-model="data.portfolio.changeAllocationEndYear">
                                             </label>
                                         </div>
                                     </div><div class="row">
@@ -526,7 +526,7 @@
                                             <label>
                                                 Equities:
                                                 <div class="input-group">
-                                                    <input type="text" class="form-control" ng-model="data.portfolio.targetPercentEquities">
+                                                    <input type="number" step="5" ng-step="1" class="form-control" ng-model="data.portfolio.targetPercentEquities">
                                                     <span class="input-group-addon">%</span>
                                                 </div>
                                             </label>
@@ -535,7 +535,7 @@
                                             <label>
                                                 Bonds:
                                                 <div class="input-group">
-                                                    <input type="text" class="form-control" ng-model="data.portfolio.targetPercentBonds">
+                                                    <input type="number" step="5" ng-step="1" class="form-control" ng-model="data.portfolio.targetPercentBonds">
                                                     <span class="input-group-addon">%</span>
                                                 </div>
                                             </label>
@@ -546,7 +546,7 @@
                                             <label>
                                                 Gold:
                                                 <div class="input-group">
-                                                    <input type="text" class="form-control" ng-model="data.portfolio.targetPercentGold">
+                                                    <input type="number" step="5" ng-step="1" class="form-control" ng-model="data.portfolio.targetPercentGold">
                                                     <span class="input-group-addon">%</span>
                                                 </div>
                                             </label>
@@ -555,7 +555,7 @@
                                             <label>
                                                 Cash:
                                                 <div class="input-group">
-                                                    <input type="text" class="form-control" ng-model="data.portfolio.targetPercentCash">
+                                                    <input type="number" step="5" ng-step="1" class="form-control" ng-model="data.portfolio.targetPercentCash">
                                                     <span class="input-group-addon">%</span>
                                                 </div>
                                             </label>
