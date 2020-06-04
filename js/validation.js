@@ -13,43 +13,29 @@ $(document).ready(function() {
 			return false;
 		}
 	}
-	$("input[ng-model='data.portfolio.percentEquities']").keyup(function() {
-		if(cmpAllocation()){
-			$("#allocationError").hide();
+
+	function checkAllocation(fn,id){
+		if(fn()){
+			$(id).hide();
 			$(".runSim").removeClass("disabled");
 		}else{
-			$("#allocationError").show();
+			$(id).show();
 			$(".runSim").addClass("disabled");
 		}
+	}
+	$("input[ng-model='data.portfolio.percentEquities']").keyup(function(){
+		checkAllocation(cmpAllocation,"#allocationError")
 	});
-	$("input[ng-model='data.portfolio.percentBonds']").keyup(function() {
-		if(cmpAllocation()){
-			$("#allocationError").hide();
-			$(".runSim").removeClass("disabled");
-		}else{
-			$("#allocationError").show();
-			$(".runSim").addClass("disabled");
-		}
+	$("input[ng-model='data.portfolio.percentBonds']").keyup(function(){
+		checkAllocation(cmpAllocation,"#allocationError")
 	});
-	$("input[ng-model='data.portfolio.percentGold']").keyup(function() {
-		if(cmpAllocation()){
-			$("#allocationError").hide();
-			$(".runSim").removeClass("disabled");
-		}else{
-			$("#allocationError").show();
-			$(".runSim").addClass("disabled");
-		}
+	$("input[ng-model='data.portfolio.percentGold']").keyup(function(){
+		checkAllocation(cmpAllocation,"#allocationError")
 	});
-	$("input[ng-model='data.portfolio.percentCash']").keyup(function() {
-		if(cmpAllocation()){
-			$("#allocationError").hide();
-			$(".runSim").removeClass("disabled");
-		}else{
-			$("#allocationError").show();
-			$(".runSim").addClass("disabled");
-		}
+	$("input[ng-model='data.portfolio.percentCash']").keyup(function(){
+		checkAllocation(cmpAllocation,"#allocationError")
 	});
-	
+
 	//Target Assets allocation add up to 100%
 	function cmpTargetAllocation(){
 		var equities = parseFloat($("input[ng-model='data.portfolio.targetPercentEquities']").val());
@@ -62,41 +48,17 @@ $(document).ready(function() {
 			return false;
 		}
 	}
-		$("input[ng-model='data.portfolio.targetPercentEquities']").keyup(function() {
-		if(cmpTargetAllocation()){
-			$("#targetAllocationError").hide();
-			$(".runSim").removeClass("disabled");
-		}else{
-			$("#targetAllocationError").show();
-			$(".runSim").addClass("disabled");
-		}
+	$("input[ng-model='data.portfolio.targetPercentEquities']").keyup(function() {
+		checkAllocation(cmpTargetAllocation,"#targetAllocationError");
 	});
 	$("input[ng-model='data.portfolio.targetPercentBonds']").keyup(function() {
-		if(cmpTargetAllocation()){
-			$("#targetAllocationError").hide();
-			$(".runSim").removeClass("disabled");
-		}else{
-			$("#targetAllocationError").show();
-			$(".runSim").addClass("disabled");
-		}
+		checkAllocation(cmpTargetAllocation,"#targetAllocationError");
 	});
 	$("input[ng-model='data.portfolio.targetPercentGold']").keyup(function() {
-		if(cmpTargetAllocation()){
-			$("#targetAllocationError").hide();
-			$(".runSim").removeClass("disabled");
-		}else{
-			$("#targetAllocationError").show();
-			$(".runSim").addClass("disabled");
-		}
+		checkAllocation(cmpTargetAllocation,"#targetAllocationError");
 	});
 	$("input[ng-model='data.portfolio.targetPercentCash']").keyup(function() {
-		if(cmpTargetAllocation()){
-			$("#targetAllocationError").hide();
-			$(".runSim").removeClass("disabled");
-		}else{
-			$("#targetAllocationError").show();
-			$(".runSim").addClass("disabled");
-		}
+		checkAllocation(cmpTargetAllocation,"#targetAllocationError");
 	});
 	
 	//Target Asset Years
