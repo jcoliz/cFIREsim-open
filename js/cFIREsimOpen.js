@@ -89,7 +89,9 @@ $(document).ready(function() {
 	//Open the help popul 
 	$('.btn-help').click(function(e) {
 		var dataURL = $(this).attr('data-href');
+		var dataTitle = $(this).attr('data-title');
 		$('#helpPopup').modal('show').find('.modal-body').load(dataURL);
+		$('#helpPopup').find('.modal-title').text(dataTitle);
 	  });
 	// Toggle up/down icon on show hide of collapse element
 	$("#gettingStarted").on('show.bs.collapse', function(){
