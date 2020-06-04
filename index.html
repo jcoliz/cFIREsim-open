@@ -279,9 +279,9 @@
                                 <span class="sr-only">Error:</span>
                                 Retirement Start must be >= Simulation Start. Retirement Start must be before Retirement End.
                             </div>
-														<label>Simulation Start Year:<input type="text" class="form-control toot" ng-model="data.simulationStartYear" id="simulationStartYear"></label>
-                            <label>Retirement Year:<input type="text" class="form-control toot" ng-model="data.retirementStartYear" id="retirementStartYear"></label>
-                            <label>Retirement End Year:<input type="text" class="form-control" ng-model="data.retirementEndYear" id="retirementEndYear"></label>
+														<label>Simulation Start Year:<input type="number" class="form-control toot" ng-model="data.simulationStartYear" id="simulationStartYear"></label>
+                            <label>Retirement Year:<input type="number" class="form-control toot" ng-model="data.retirementStartYear" id="retirementStartYear"></label>
+                            <label>Retirement End Year:<input type="number" class="form-control" ng-model="data.retirementEndYear" id="retirementEndYear"></label>
                             <p>Pre-retirement length = {{ data.retirementStartYear - data.simulationStartYear }} years.</p>
                             <p>Retirement length = {{ data.retirementEndYear - data.retirementStartYear }} years.</p>
                             <p>Total simulation length = {{ data.retirementEndYear - data.simulationStartYear }} years.</p>
@@ -425,7 +425,7 @@
                                             <label>
                                                 Equities:
                                                 <div class="input-group">
-                                                    <input type="text" class="form-control" ng-model="data.portfolio.percentEquities">
+                                                    <input type="number" step="5" ng-step="1" class="form-control" ng-model="data.portfolio.percentEquities">
                                                     <span class="input-group-addon">%</span>
                                                 </div>
                                             </label>
@@ -434,7 +434,7 @@
                                             <label>
                                                 Bonds:
                                                 <div class="input-group">
-                                                    <input type="text" class="form-control" ng-model="data.portfolio.percentBonds">
+                                                    <input type="number" step="5" ng-step="1" class="form-control" ng-model="data.portfolio.percentBonds">
                                                     <span class="input-group-addon">%</span>
                                                 </div>
                                             </label>
@@ -445,7 +445,7 @@
                                             <label>
                                                 Gold:
                                                 <div class="input-group">
-                                                    <input type="text" class="form-control" ng-model="data.portfolio.percentGold">
+                                                    <input type="number" step="5" ng-step="1" class="form-control" ng-model="data.portfolio.percentGold">
                                                     <span class="input-group-addon">%</span>
                                                 </div>
                                             </label>
@@ -454,7 +454,7 @@
                                             <label>
                                                 Cash:
                                                 <div class="input-group">
-                                                    <input type="text" class="form-control" ng-model="data.portfolio.percentCash">
+                                                    <input type="number" step="5" ng-step="1" class="form-control" ng-model="data.portfolio.percentCash">
                                                     <span class="input-group-addon">%</span>
                                                 </div>
                                             </label>
@@ -465,7 +465,7 @@
                                             <label>
                                                 Fees/Drag:
                                                 <div class="input-group">
-                                                    <input type="text" class="form-control" ng-model="data.portfolio.percentFees">
+                                                    <input type="number" step="0.01" class="form-control" ng-model="data.portfolio.percentFees">
                                                     <span class="input-group-addon">%</span>
                                                 </div>
                                             </label>
@@ -474,7 +474,7 @@
                                             <label>
                                                 Growth of Cash:
                                                 <div class="input-group">
-                                                    <input type="text" class="form-control" ng-model="data.portfolio.growthOfCash">
+                                                    <input  type="number" step="0.05" ng-step="0.01" class="form-control" ng-model="data.portfolio.growthOfCash">
                                                     <span class="input-group-addon">%</span>
                                                 </div>
                                             </label>
@@ -588,7 +588,7 @@
                                     Initial Yearly Spending:
                                     <div class="input-group">
                                         <span class="input-group-addon">$</span>
-                                        <input type="text" class="form-control" ng-model="data.spending.initial">
+                                        <input type="number" step="5000" ng-step="1" class="form-control" ng-model="data.spending.initial">
                                     </div>
                                 </label>
                             </div>
